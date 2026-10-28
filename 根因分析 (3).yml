@@ -1,0 +1,1432 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: 根因分析
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: hjlarry/mermaid_converter:0.0.1@46e755f0d92566a1f7a6e85086eac02a735afaa41479e7a2277b150abda70b18
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/siliconflow:0.0.59@8f02741bb210eac68b68263c1cbede0e0637f2d1ad082895906e03253461729c
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 10
+        file_size_limit: 30
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 15
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787292868713-source-1787296443604-target
+      selected: false
+      source: '1787292868713'
+      sourceHandle: source
+      target: '1787296443604'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787292868713-source-1787296479675-target
+      selected: false
+      source: '1787292868713'
+      sourceHandle: source
+      target: '1787296479675'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787296443604-source-1787625395763-target
+      selected: false
+      source: '1787296443604'
+      sourceHandle: source
+      target: '1787625395763'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787296479675-source-1787625395763-target
+      selected: false
+      source: '1787296479675'
+      sourceHandle: source
+      target: '1787625395763'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1787640991821'
+        sourceType: iteration-start
+        targetType: code
+      id: 1787640991821start-source-1787640999567-target
+      selected: false
+      source: 1787640991821start
+      sourceHandle: source
+      target: '1787640999567'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1787640991821'
+        sourceType: code
+        targetType: knowledge-retrieval
+      id: 1787640999567-source-1787642614108-target
+      selected: false
+      source: '1787640999567'
+      sourceHandle: source
+      target: '1787642614108'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787648731605-source-1787648914465-target
+      selected: false
+      source: '1787648731605'
+      sourceHandle: source
+      target: '1787648914465'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1787651571274-source-1787648731605-target
+      selected: false
+      source: '1787651571274'
+      sourceHandle: source
+      target: '1787648731605'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: llm
+      id: 1787640991821-source-1787651571274-target
+      selected: false
+      source: '1787640991821'
+      sourceHandle: source
+      target: '1787651571274'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: tool
+      id: 1787640991821-source-1787649923163-target
+      selected: false
+      source: '1787640991821'
+      sourceHandle: source
+      target: '1787649923163'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787649923163-source-1787648914465-target
+      selected: false
+      source: '1787649923163'
+      sourceHandle: source
+      target: '1787648914465'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: 1787625395763-source-1787714769853-target
+      source: '1787625395763'
+      sourceHandle: source
+      target: '1787714769853'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1787714769853-false-1787714848254-target
+      source: '1787714769853'
+      sourceHandle: 'false'
+      target: '1787714848254'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1787714769853-true-1787640991821-target
+      source: '1787714769853'
+      sourceHandle: 'true'
+      target: '1787640991821'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: alarms
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: alarms
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: device_topology
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: device_topology
+      height: 135
+      id: '1787292868713'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 告警文件提取
+        type: document-extractor
+        variable_selector:
+        - '1787292868713'
+        - alarms
+      height: 104
+      id: '1787296443604'
+      position:
+        x: 399
+        y: 236
+      positionAbsolute:
+        x: 399
+        y: 236
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 拓扑文件提取
+        type: document-extractor
+        variable_selector:
+        - '1787292868713'
+        - device_topology
+      height: 104
+      id: '1787296479675'
+      position:
+        x: 399
+        y: 386
+      positionAbsolute:
+        x: 399
+        y: 386
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\nimport datetime\nimport re\nfrom collections import defaultdict\n\
+          from typing import List, Dict, Optional, Any\n\n\ndef parse_markdown_table(text:\
+          \ str) -> List[Dict[str, str]]:\n    \"\"\"\n    解析 Markdown 表格，返回列表字典。\n\
+          \    支持标准格式：表头行、分隔行、数据行。\n    \"\"\"\n    lines = [line.strip() for line\
+          \ in text.strip().splitlines() if line.strip()]\n    if len(lines) < 2:\n\
+          \        return []\n\n    # 寻找分隔行（包含 ---）\n    sep_idx = None\n    for i,\
+          \ line in enumerate(lines):\n        if re.search(r'\\|?\\s*---+\\s*\\|',\
+          \ line):\n            sep_idx = i\n            break\n\n    if sep_idx is\
+          \ None:\n        header_line = lines[0]\n        data_lines = lines[1:]\n\
+          \    else:\n        header_line = lines[0]\n        data_lines = lines[sep_idx\
+          \ + 1:]\n\n    # 解析表头\n    headers = [h.strip() for h in header_line.split('|')\
+          \ if h.strip() != '']\n    rows = []\n    for line in data_lines:\n    \
+          \    cells = [c.strip() for c in line.split('|')]\n        # 去除首尾可能因行首尾\
+          \ | 产生的空字符串\n        if cells and cells[0] == '':\n            cells = cells[1:]\n\
+          \        if cells and cells[-1] == '':\n            cells = cells[:-1]\n\
+          \        # 补齐或截断至表头长度\n        if len(cells) < len(headers):\n         \
+          \   cells += [''] * (len(headers) - len(cells))\n        elif len(cells)\
+          \ > len(headers):\n            cells = cells[:len(headers)]\n        rows.append(dict(zip(headers,\
+          \ cells)))\n    return rows\n\n\ndef parse_timestamp(ts_str: str) -> Optional[datetime.datetime]:\n\
+          \    \"\"\"尝试多种常见时间格式解析，返回 datetime 或 None\"\"\"\n    formats = [\n    \
+          \    '%Y-%m-%d %H:%M:%S',\n        '%Y-%m-%d %H:%M:%S.%f',\n        '%Y-%m-%dT%H:%M:%S',\n\
+          \        '%Y-%m-%dT%H:%M:%S.%f',\n        '%Y/%m/%d %H:%M:%S',\n       \
+          \ '%Y-%m-%d %H:%M',\n    ]\n    for fmt in formats:\n        try:\n    \
+          \        return datetime.datetime.strptime(ts_str, fmt)\n        except\
+          \ ValueError:\n            continue\n    return None\n\n\ndef main(alarms:\
+          \ str, device_topology: str) -> Dict[str, Any]:\n    \"\"\"\n    Dify 代码执行节点入口函数。\n\
+          \    输入：告警文件内容（Markdown 表格）、拓扑文件内容（Markdown 表格）\n    输出：evidence_pack, topology_mermaid,\
+          \ dispatch_queries, validation_errors\n    \"\"\"\n    # 初始返回值（无 active\
+          \ 告警时保持）\n    result = {\n        'evidence_pack': '[]',\n        'topology_mermaid':\
+          \ '',\n        'dispatch_queries': [],\n        'validation_errors': []\
+          \   # 新增：存放校验错误信息\n    }\n\n    # ---------- 1. 输入非空校验 ----------\n    if\
+          \ not alarms or not alarms.strip():\n        result['validation_errors'].append(\"\
+          告警文件为空\")\n        return result\n    if not device_topology or not device_topology.strip():\n\
+          \        result['validation_errors'].append(\"拓扑文件为空\")\n        return\
+          \ result\n\n    # ---------- 2. 解析表格 ----------\n    try:\n        alarm_rows\
+          \ = parse_markdown_table(alarms)\n        topo_rows = parse_markdown_table(device_topology)\n\
+          \    except Exception as e:\n        result['validation_errors'].append(f\"\
+          解析表格失败: {str(e)}\")\n        return result\n\n    # ---------- 3. 字段完整性校验\
+          \ ----------\n    required_alarm_fields = {'timestamp', 'device_id', 'device_type',\
+          \ 'domain', 'alarm_type', 'severity', 'status'}\n    if not alarm_rows:\n\
+          \        result['validation_errors'].append(\"告警文件无数据\")\n        return\
+          \ result\n    missing = required_alarm_fields - set(alarm_rows[0].keys())\n\
+          \    if missing:\n        result['validation_errors'].append(f\"告警文件缺少字段:\
+          \ {','.join(missing)}\")\n        return result\n\n    required_topo_fields\
+          \ = {'device_id', 'device_type', 'domain', 'parent_device_id'}\n    if not\
+          \ topo_rows:\n        result['validation_errors'].append(\"拓扑文件无数据\")\n\
+          \        return result\n    missing_topo = required_topo_fields - set(topo_rows[0].keys())\n\
+          \    if missing_topo:\n        result['validation_errors'].append(f\"拓扑文件缺少字段:\
+          \ {','.join(missing_topo)}\")\n        return result\n\n    # ----------\
+          \ 4. 过滤 active 告警 ----------\n    active_alarms = [row for row in alarm_rows\
+          \ if row.get('status', '').strip().lower() == 'active']\n    if not active_alarms:\n\
+          \        # 无 active 告警，视为正常，无错误，直接返回\n        return result\n\n    # ----------\
+          \ 5. 构建拓扑设备 ID 集合 ----------\n    topo_device_ids = {row.get('device_id',\
+          \ '').strip() for row in topo_rows if row.get('device_id', '').strip()}\n\
+          \n    # ---------- 6. 校验告警时间是否可解析 & 设备是否存在于拓扑表 ----------\n    invalid_time_alarms\
+          \ = []\n    missing_device_alarms = []\n    valid_active_alarms = []\n\n\
+          \    for row in active_alarms:\n        dev_id = row.get('device_id', '').strip()\n\
+          \        ts_str = row.get('timestamp', '').strip()\n        # 时间解析校验\n \
+          \       if not ts_str or parse_timestamp(ts_str) is None:\n            invalid_time_alarms.append(row)\n\
+          \            continue\n        # 设备存在性校验\n        if dev_id not in topo_device_ids:\n\
+          \            missing_device_alarms.append(row)\n            continue\n \
+          \       valid_active_alarms.append(row)\n\n    # 收集错误信息\n    if invalid_time_alarms:\n\
+          \        sample_ids = [row.get('device_id', '') for row in invalid_time_alarms[:3]]\n\
+          \        result['validation_errors'].append(\n            f\"存在 {len(invalid_time_alarms)}\
+          \ 条告警的时间格式无法解析，例如设备 {', '.join(sample_ids)}\"\n        )\n    if missing_device_alarms:\n\
+          \        sample_ids = [row.get('device_id', '') for row in missing_device_alarms[:3]]\n\
+          \        result['validation_errors'].append(\n            f\"存在 {len(missing_device_alarms)}\
+          \ 条告警的设备不在拓扑表中，例如设备 {', '.join(sample_ids)}\"\n        )\n\n    # 如果存在校验错误，直接返回（其他输出保持初始空值）\n\
+          \    if result['validation_errors']:\n        return result\n\n    # 用有效告警覆盖原\
+          \ active_alarms\n    active_alarms = valid_active_alarms\n    if not active_alarms:\n\
+          \        return result  # 无有效 active 告警\n\n    # ---------- 7. 构建拓扑关系 ----------\n\
+          \    parent_of: Dict[str, Optional[str]] = {}\n    children_of: Dict[str,\
+          \ List[str]] = defaultdict(list)\n    for row in topo_rows:\n        dev_id\
+          \ = row.get('device_id', '').strip()\n        parent = row.get('parent_device_id',\
+          \ '').strip() or None\n        if dev_id:\n            parent_of[dev_id]\
+          \ = parent\n            if parent:\n                children_of[parent].append(dev_id)\n\
+          \    for row in topo_rows:\n        dev_id = row.get('device_id', '').strip()\n\
+          \        if dev_id and dev_id not in children_of:\n            children_of[dev_id]\
+          \ = []\n\n    # ---------- 8. 严重级别映射 ----------\n    severity_order = {'critical':\
+          \ 4, 'major': 3, 'minor': 2, 'warning': 1}\n\n    # ---------- 9. 按设备分组聚合\
+          \ active 告警 ----------\n    device_groups: Dict[str, Dict] = defaultdict(lambda:\
+          \ {\n        'device_type': '',\n        'domain': '',\n        'first_time':\
+          \ None,\n        'max_severity': None,\n        'alarm_types': [],\n   \
+          \     'alarm_rows': []\n    })\n\n    for row in active_alarms:\n      \
+          \  dev_id = row.get('device_id', '').strip()\n        if not dev_id:\n \
+          \           continue\n        ts_str = row.get('timestamp', '').strip()\n\
+          \        ts = parse_timestamp(ts_str)\n        if ts is None:\n        \
+          \    continue  # 已经校验过，理论上不会发生\n\n        severity = row.get('severity',\
+          \ '').strip().lower()\n        alarm_type = row.get('alarm_type', '').strip()\n\
+          \n        group = device_groups[dev_id]\n        group['device_type'] =\
+          \ row.get('device_type', '').strip()\n        group['domain'] = row.get('domain',\
+          \ '').strip()\n\n        if group['first_time'] is None or ts < group['first_time']:\n\
+          \            group['first_time'] = ts\n\n        sev_val = severity_order.get(severity,\
+          \ 0)\n        current_max = group['max_severity']\n        if current_max\
+          \ is None or sev_val > severity_order.get(current_max, 0):\n           \
+          \ group['max_severity'] = severity\n\n        if alarm_type and alarm_type\
+          \ not in group['alarm_types']:\n            group['alarm_types'].append(alarm_type)\n\
+          \n        group['alarm_rows'].append(row)\n\n    if not device_groups:\n\
+          \        return result\n\n    # ---------- 10. 辅助函数（祖先/后代） ----------\n\
+          \    def get_ancestors(dev_id: str) -> List[str]:\n        ancestors = []\n\
+          \        current = dev_id\n        while current and current in parent_of:\n\
+          \            parent = parent_of[current]\n            if parent is None:\n\
+          \                break\n            ancestors.append(parent)\n         \
+          \   current = parent\n        ancestors.reverse()\n        return ancestors\n\
+          \n    def get_descendants(dev_id: str) -> List[str]:\n        descendants\
+          \ = []\n        stack = list(children_of.get(dev_id, []))\n        while\
+          \ stack:\n            child = stack.pop()\n            descendants.append(child)\n\
+          \            stack.extend(children_of.get(child, []))\n        return descendants\n\
+          \n    # ---------- 11. 构建 evidence_pack 和 dispatch_queries ----------\n\
+          \    evidence_pack = []\n    dispatch_queries = []\n    related_nodes =\
+          \ set()\n    edges = set()\n\n    for dev_id, group in device_groups.items():\n\
+          \        parent = parent_of.get(dev_id)\n        direct_children = children_of.get(dev_id,\
+          \ [])\n        all_descendants = get_descendants(dev_id)\n        ancestors\
+          \ = get_ancestors(dev_id)\n\n        total_descendants = len(all_descendants)\n\
+          \        impact_scope = f\"共 {total_descendants} 台下挂设备（含直接子节点）\"\n     \
+          \   if direct_children:\n            impact_scope += f\"，直接子节点: {', '.join(direct_children)}\"\
+          \n\n        alarm_phenomena = '、'.join(group['alarm_types']) if group['alarm_types']\
+          \ else '无'\n        highest_sev = group['max_severity'] if group['max_severity']\
+          \ else 'unknown'\n        first_time_str = group['first_time'].strftime('%Y-%m-%d\
+          \ %H:%M:%S') if group['first_time'] else ''\n\n        record = {\n    \
+          \        \"device_id\": dev_id,\n            \"device_type\": group['device_type'],\n\
+          \            \"domain\": group['domain'],\n            \"first_alarm_time\"\
+          : first_time_str,\n            \"highest_severity\": highest_sev,\n    \
+          \        \"alarm_phenomena\": alarm_phenomena,\n            \"parent_device_id\"\
+          : parent if parent else \"无\",\n            \"direct_child_devices\": direct_children\
+          \ if direct_children else [\"无\"],\n            \"impact_scope\": impact_scope\n\
+          \        }\n        evidence_pack.append(record)\n\n        alarm_types_str\
+          \ = ', '.join(group['alarm_types']) if group['alarm_types'] else ''\n  \
+          \      query = f\"{group['device_type']} {group['domain']} {highest_sev}\
+          \ {alarm_types_str}\".strip()\n        dispatch_queries.append(query)\n\n\
+          \        related_nodes.add(dev_id)\n        for anc in ancestors:\n    \
+          \        related_nodes.add(anc)\n        for desc in all_descendants:\n\
+          \            related_nodes.add(desc)\n\n        for node in related_nodes:\n\
+          \            p = parent_of.get(node)\n            if p and p in related_nodes:\n\
+          \                edges.add((p, node))\n\n    # ---------- 12. 生成 Mermaid\
+          \ 图 ----------\n    if related_nodes:\n        mermaid_lines = [\"graph\
+          \ TD\"]\n        for node in sorted(related_nodes):\n            mermaid_lines.append(f\"\
+          \    {node}[{node}]\")\n        for p, c in sorted(edges):\n           \
+          \ mermaid_lines.append(f\"    {p} --> {c}\")\n        for dev_id in device_groups.keys():\n\
+          \            if dev_id in related_nodes:\n                mermaid_lines.append(f\"\
+          \    style {dev_id} fill:#ff6b6b,stroke:#333,stroke-width:2px\")\n     \
+          \   topology_mermaid = \"\\n\".join(mermaid_lines)\n    else:\n        topology_mermaid\
+          \ = \"\"\n\n    # ---------- 13. 构造返回值 ----------\n    result['evidence_pack']\
+          \ = json.dumps(evidence_pack, ensure_ascii=False)\n    result['topology_mermaid']\
+          \ = topology_mermaid\n    result['dispatch_queries'] = dispatch_queries\n\
+          \    # validation_errors 保持为空列表\n    return result"
+        code_language: python3
+        outputs:
+          dispatch_queries:
+            children: null
+            type: array[string]
+          evidence_pack:
+            children: null
+            type: string
+          topology_mermaid:
+            children: null
+            type: string
+          validation_errors:
+            children: null
+            type: array[string]
+        selected: false
+        title: 代码执行
+        type: code
+        variables:
+        - value_selector:
+          - '1787296443604'
+          - text
+          value_type: string
+          variable: alarms
+        - value_selector:
+          - '1787296479675'
+          - text
+          value_type: string
+          variable: device_topology
+      height: 52
+      id: '1787625395763'
+      position:
+        x: 723
+        y: 311
+      positionAbsolute:
+        x: 723
+        y: 311
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        error_handle_mode: terminated
+        flatten_output: true
+        height: 165
+        is_parallel: false
+        iterator_input_type: array[string]
+        iterator_selector:
+        - '1787625395763'
+        - dispatch_queries
+        output_selector:
+        - '1787642614108'
+        - result
+        output_type: array[object]
+        parallel_nums: 10
+        selected: false
+        start_node_id: 1787640991821start
+        title: 迭代
+        type: iteration
+        width: 688
+      height: 165
+      id: '1787640991821'
+      position:
+        x: 1308.3377895245428
+        y: 294.78107846681877
+      positionAbsolute:
+        x: 1308.3377895245428
+        y: 294.78107846681877
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 688
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1787640991821start
+      parentId: '1787640991821'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 1332.3377895245428
+        y: 362.78107846681877
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: "def main(**kwargs) -> dict:\n    query = kwargs.get('query_text') or\
+          \ kwargs.get('dispatch_query') or kwargs.get('item')\n    if query is None\
+          \ and kwargs:\n        query = list(kwargs.values())[0]\n\n    return {'query_text':\
+          \ query or ''}\n"
+        code_language: python3
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1787640991821'
+        outputs:
+          query_text:
+            children: null
+            type: string
+        selected: false
+        title: 检索词提取
+        type: code
+        variables:
+        - value_selector:
+          - '1787640991821'
+          - item
+          value_type: string
+          variable: dispatch_queries
+      height: 52
+      id: '1787640999567'
+      parentId: '1787640991821'
+      position:
+        x: 128
+        y: 69
+      positionAbsolute:
+        x: 1436.3377895245428
+        y: 363.78107846681877
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        dataset_ids:
+        - C3wUG3byXVmvUnbdqhvj6pLqeo5sK+nEEBJt9caQ4kC0gG7LwCkmtIBQcdWDloM6
+        isInIteration: true
+        isInLoop: false
+        iteration_id: '1787640991821'
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_attachment_selector: []
+        query_variable_selector:
+        - '1787640999567'
+        - query_text
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 90
+      id: '1787642614108'
+      parentId: '1787640991821'
+      position:
+        x: 430
+        y: 68
+      positionAbsolute:
+        x: 1738.3377895245428
+        y: 362.78107846681877
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 1002
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          label:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            ja_JP: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            pt_BR: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            zh_Hans: 可选的docx模板文件，用于样式控制。使用Microsoft Word中“开始”-“样式窗格”对docx文件的样式进行编辑。
+          label:
+            en_US: DOCX Template File
+            ja_JP: DOCX Template File
+            pt_BR: DOCX Template File
+            zh_Hans: DOCX 模板文件
+          llm_description: An optional .pptx file that serves as a template for the
+            generated presentation
+          max: null
+          min: null
+          name: docx_template_file
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: file
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: 'false'
+          form: form
+          human_description:
+            en_US: Whether to include table of contents at the beginning of the DOCX
+              file
+            ja_JP: Whether to include table of contents at the beginning of the DOCX
+              file
+            pt_BR: Whether to include table of contents at the beginning of the DOCX
+              file
+            zh_Hans: 是否在包含目录在DOCX文件开头
+          label:
+            en_US: Include Table of Contents
+            ja_JP: Include Table of Contents
+            pt_BR: Include Table of Contents
+            zh_Hans: 包含目录
+          llm_description: ''
+          max: null
+          min: null
+          name: enable_toc
+          options:
+          - icon: ''
+            label:
+              en_US: 'Yes'
+              ja_JP: 'Yes'
+              pt_BR: 'Yes'
+              zh_Hans: 是
+            value: 'true'
+          - icon: ''
+            label:
+              en_US: 'No'
+              ja_JP: 'No'
+              pt_BR: 'No'
+              zh_Hans: 否
+            value: 'false'
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        params:
+          docx_template_file: ''
+          enable_toc: ''
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: Markdown ⮕ DOCX
+        tool_configurations:
+          enable_toc:
+            type: constant
+            value: 'false'
+        tool_description: 将 Markdown 转换为 DOCX 文件的工具
+        tool_label: Markdown ⮕ DOCX
+        tool_name: md_to_docx
+        tool_node_version: '2'
+        tool_parameters:
+          docx_template_file:
+            type: constant
+            value: null
+          md_text:
+            type: mixed
+            value: '{{#1787651571274.text#}}'
+          output_filename:
+            type: mixed
+            value: 雷凯
+        type: tool
+      height: 88
+      id: '1787648731605'
+      position:
+        x: 1994.732890616549
+        y: -53.82920043508436
+      positionAbsolute:
+        x: 1994.732890616549
+        y: -53.82920043508436
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1787648731605'
+          - files
+          value_type: array[file]
+          variable: files
+        - value_selector:
+          - '1787651571274'
+          - text
+          value_type: string
+          variable: text
+        - value_selector:
+          - '1787649923163'
+          - files
+          value_type: array[file]
+          variable: files_1
+        selected: false
+        title: 输出
+        type: end
+      height: 140
+      id: '1787648914465'
+      position:
+        x: 2267.1734151940377
+        y: 57.117475109508476
+      positionAbsolute:
+        x: 2267.1734151940377
+        y: 57.117475109508476
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The Mermaid diagram syntax code to convert to an image
+            ja_JP: The Mermaid diagram syntax code to convert to an image
+            pt_BR: O código de sintaxe do diagrama Mermaid para converter em imagem
+            zh_Hans: 要转换为图像的Mermaid图表语法代码
+          label:
+            en_US: Mermaid Code
+            ja_JP: Mermaid Code
+            pt_BR: Código Mermaid
+            zh_Hans: Mermaid代码
+          llm_description: Mermaid diagram syntax code that defines the structure
+            and content of the diagram to be converted to an image
+          max: null
+          min: null
+          name: mermaid_code
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: png
+          form: form
+          human_description:
+            en_US: The image format for the output file
+            ja_JP: The image format for the output file
+            pt_BR: O formato de imagem para o arquivo de saída
+            zh_Hans: 输出文件的图像格式
+          label:
+            en_US: Output Format
+            ja_JP: Output Format
+            pt_BR: Formato de Saída
+            zh_Hans: 输出格式
+          llm_description: 'Output image format: PNG for general use, JPG for photos,
+            SVG for scalable vector graphics, PDF for documents'
+          max: null
+          min: null
+          name: output_format
+          options:
+          - icon: ''
+            label:
+              en_US: PNG
+              ja_JP: PNG
+              pt_BR: PNG
+              zh_Hans: PNG
+            value: png
+          - icon: ''
+            label:
+              en_US: JPG
+              ja_JP: JPG
+              pt_BR: JPG
+              zh_Hans: JPG
+            value: jpg
+          - icon: ''
+            label:
+              en_US: SVG
+              ja_JP: SVG
+              pt_BR: SVG
+              zh_Hans: SVG
+            value: svg
+          - icon: ''
+            label:
+              en_US: PDF
+              ja_JP: PDF
+              pt_BR: PDF
+              zh_Hans: PDF
+            value: pdf
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: default
+          form: form
+          human_description:
+            en_US: Visual theme for the diagram
+            ja_JP: Visual theme for the diagram
+            pt_BR: Tema visual para o diagrama
+            zh_Hans: 图表的视觉主题
+          label:
+            en_US: Theme
+            ja_JP: Theme
+            pt_BR: Tema
+            zh_Hans: 主题
+          llm_description: Visual theme that controls the color scheme and styling
+            of the diagram
+          max: null
+          min: null
+          name: theme
+          options:
+          - icon: ''
+            label:
+              en_US: Default
+              ja_JP: Default
+              pt_BR: Default
+              zh_Hans: Default
+            value: default
+          - icon: ''
+            label:
+              en_US: Dark
+              ja_JP: Dark
+              pt_BR: Dark
+              zh_Hans: Dark
+            value: dark
+          - icon: ''
+            label:
+              en_US: Neutral
+              ja_JP: Neutral
+              pt_BR: Neutral
+              zh_Hans: Neutral
+            value: neutral
+          - icon: ''
+            label:
+              en_US: Forest
+              ja_JP: Forest
+              pt_BR: Forest
+              zh_Hans: Forest
+            value: forest
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Background color for the image (hex color code or transparent)
+            ja_JP: Background color for the image (hex color code or transparent)
+            pt_BR: Cor de fundo para a imagem (código de cor hexadecimal ou transparente)
+            zh_Hans: 图像的背景颜色（十六进制颜色代码或透明）
+          label:
+            en_US: Background Color
+            ja_JP: Background Color
+            pt_BR: Cor de Fundo
+            zh_Hans: 背景颜色
+          llm_description: Background color as hex code (e.g., FF0000 for red) or
+            named color with ! prefix (e.g., !white)
+          max: null
+          min: null
+          name: background_color
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Image width in pixels
+            ja_JP: Image width in pixels
+            pt_BR: Largura da imagem em pixels
+            zh_Hans: 图像宽度（像素）
+          label:
+            en_US: Width
+            ja_JP: Width
+            pt_BR: Largura
+            zh_Hans: 宽度
+          llm_description: Width of the output image in pixels
+          max: null
+          min: null
+          name: width
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Image height in pixels
+            ja_JP: Image height in pixels
+            pt_BR: Altura da imagem em pixels
+            zh_Hans: 图像高度（像素）
+          label:
+            en_US: Height
+            ja_JP: Height
+            pt_BR: Altura
+            zh_Hans: 高度
+          llm_description: Height of the output image in pixels
+          max: null
+          min: null
+          name: height
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        params:
+          background_color: ''
+          height: ''
+          mermaid_code: ''
+          output_format: ''
+          theme: ''
+          width: ''
+        plugin_id: hjlarry/mermaid_converter
+        plugin_unique_identifier: hjlarry/mermaid_converter:0.0.1@46e755f0d92566a1f7a6e85086eac02a735afaa41479e7a2277b150abda70b18
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=bb01cde45bd66ab839c76ce5008de47990ad5cb1caf5b13fcc2abb88b5b8ae76.svg
+        provider_id: hjlarry/mermaid_converter/mermaid_converter
+        provider_name: hjlarry/mermaid_converter/mermaid_converter
+        provider_type: builtin
+        selected: false
+        title: Mermaid转换器
+        tool_configurations:
+          background_color:
+            type: mixed
+            value: '#FFFFFF'
+          height:
+            type: constant
+            value: 3000
+          output_format:
+            type: constant
+            value: png
+          theme:
+            type: constant
+            value: default
+          width:
+            type: constant
+            value: 5000
+        tool_description: 将Mermaid图表代码转换为各种格式的图像（PNG、JPG、PDF、SVG）
+        tool_label: Mermaid转换器
+        tool_name: mermaid_converter
+        tool_node_version: '2'
+        tool_parameters:
+          mermaid_code:
+            type: mixed
+            value: '{{#1787625395763.topology_mermaid#}}'
+        type: tool
+      height: 192
+      id: '1787649923163'
+      position:
+        x: 1459.9270235690838
+        y: 553.10482310807
+      positionAbsolute:
+        x: 1459.9270235690838
+        y: 553.10482310807
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1787640991821'
+          - output
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: deepseek-ai/DeepSeek-V4-Pro
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: d138a12d-1c2c-4d46-97a0-bce91416568a
+          role: system
+          text: '# 角色
+
+            你是通信网络告警派单工程师。你的任务是根据输入的告警事件、拓扑影响分析、派单策略检索结果，生成一份标准化的《告警派单工单报告》。
+
+
+            # 任务边界（严格遵守）
+
+            - 只做"告警事件定级 + 派单决策 + 工单生成"
+
+            - 禁止输出根因结论、故障诊断结论、维修步骤、处理动作
+
+            - 禁止输出事件处理结论、人工确认事项、总结性大段文字
+
+            - 禁止输出 metadata、dataset_id、segment_id、score、检索调试信息
+
+            - 禁止编造策略ID；未命中必须写"未命中，走兜底人工研判"
+
+            - 不同告警设备必须分别生成工单，不得混合
+
+
+            # 输出格式（严格遵守，不要增删章节）
+
+
+            第一行输出固定标题：
+
+            # 告警派单工单报告
+
+
+            随后输出两个章节：
+
+
+            ## 一、派单决策汇总
+
+
+            输出一张 Markdown 表格，表头固定为以下 12 列，顺序不得改变：
+
+            | 工单编号 | 涉及设备 | 设备类型 | 告警现象 | 事件类型 | 影响范围 | 优先级 | 命中策略ID | 自动派单 | 进入故障诊断
+            | 派单专业 | SLA要求 |
+
+
+            每行对应一个告警设备。字段填写规则：
+
+            - 工单编号：格式为 WO-YYYYMMDD-序号，例如 WO-20260309-001。序号按 {{#1787625395763.evidence_pack#}}中设备出现顺序递增。
+
+            - 涉及设备：device_id
+
+            - 设备类型：device_type
+
+            - 告警现象：alert_phenomenon(原文或精简)
+
+            - 事件类型：从告警现象中提炼映射规则：光链路劣化 → 设备性能劣化，节点拥塞 → 网络拥塞，电源不稳 → 电源故障，覆盖问题 → 无线覆盖异常，风扇转速高
+            → 硬件异常等。若策略未命中，写"待人工研判"
+
+            - 影响范围：格式"影响 N 个用户"或“直接影响N台设备（设备名称），间接影响M台设备”。若无下挂，写"无下挂设备"
+
+            - 优先级：优先使用策略输出的值；若无策略结果，则取highest_severity做映射：CRITICAL → 高，WARNING → 中，INFO
+            → 低；未命中写"未命中"
+
+            - 命中策略ID：策略库命中写规则ID（如 DR021）；未命中写"未命中，走兜底人工研判"。禁止编造
+
+            - 自动派单：是 / 否（按策略库"是否自动派单"字段）
+
+            - 进入故障诊断：是 / 否 / 可选（按策略库"是否进入故障诊断"字段）
+
+            - 派单专业：策略库"派单对象"或"涉及专业"字段；未命中写"综合网管值班"
+
+            - SLA要求：策略库 SLA 字段原文；未命中写"未命中"
+
+
+            ## 二、标准派单工单
+
+
+            每个告警设备单独输出一张工单，工单之间用虚线分隔。每张工单严格按以下 16 个字段输出，字段名固定不得改变，使用"字段名：值"格式：
+
+
+            - 工单标题：[设备ID] 告警 -告警现象简述
+
+            - 工单级别：P1/P2/P3
+
+            - 故障设备：device_id
+
+            - 设备类型：device_type
+
+            - 专业域：domain
+
+            - 告警时间：first_alarm_time
+
+            - 告警级别：highest_severity
+
+            - 告警现象：alert_phenomenon(原文或精简)
+
+            - 影响范围：impact_scope（可保留英文或译中文）
+
+            - 命中策略ID：规则ID 或"未命中，走兜底人工研判"
+
+            - 派单专业：策略库派单对象
+
+            - SLA要求：策略库 SLA 原文；未命中写"未命中"
+
+            - 派单原因：仅写告警事实 + 拓扑依据 + 策略命中依据。模板：[设备ID]出现[告警现象]，最高级别[severity]，位于拓扑链[父节点链]，下挂[N]个用户，命中策略[策略ID]，按策略规则派[派单专业]。禁止写维修建议或根因推断
+
+            - 需补充证据：策略库"需补充证据"字段原文；未命中写"原始告警、拓扑、日志、客户投诉"
+
+            - 是否自动派单：是 / 否
+
+            - 是否进入故障诊断：是 / 否 / 可选
+
+            - 给故障诊断工作流的输入摘要：只写事实、拓扑、现象和待判断问题。模板：故障设备[device_id]，告警[phenomena + severity]，拓扑父链[parent_chain]，下挂设备[descendants前5个]，影响用户数[N]，待判断：[基于告警类型推断的1-2个待诊断问题，如"光链路劣化是否源于分光器或主干光缆""节点拥塞是否源于上游PTN流量异常"]。禁止写诊断结论或处理步骤
+
+
+            # 输入处理规则
+
+
+            输入数据包含三部分：
+
+            1. events：告警事件数组，每个元素含 device_id, device_type, domain, first_alarm_time,
+            latest_alarm_time, highest_severity, alarm_count, phenomena, parent_chain,
+            parent_device_id, direct_children, descendants, affected_user_count, scenario,
+            location 等
+
+            2. retrieval_results：每个告警设备的策略检索命中结果，含规则ID、场景、触发条件、优先级、是否自动派单、是否进入故障诊断、派单对象、派单原因模板、需补充证据、SLA要求。若某设备无检索结果，按"未命中"处理
+
+            3. warnings：节点[1]输出的数据不一致预警，可在工单"派单原因"中提及，但不影响工单生成
+
+
+            策略命中判定规则：
+
+            - 检索结果中含规则ID（DR0xx），即视为命中，按该策略填写优先级、派单专业、SLA、是否自动派单、是否进入故障诊断
+
+            - 检索结果为空、规则ID缺失、或规则ID不在策略库 DR001-DR100 范围内，视为未命中
+
+            - 未命中时，命中策略ID写"未命中，走兜底人工研判"，优先级写"未命中"，派单专业写"综合网管值班"，SLA写"未命中"，需补充证据写"原始告警、拓扑、日志、客户投诉"，是否自动派单写"是"，是否进入故障诊断写"是"
+
+
+            # 输出纪律
+
+
+            1. 整个输出只包含标题 + 两个章节，不要添加任何前言、结语、说明、注意事项
+
+            2. 不要使用代码块包裹整个输出
+
+            3. 工单之间只用一个虚线分隔，不要加"工单1""工单2"之类的小标题
+
+            4. 字段值中不要出现换行符，单字段内只能是一行文本
+
+            5. 表格中不要使用换行，每个单元格一行
+
+            6. 输出的所有内容必须能直接复制到 Word 文档中作为最终交付件
+
+
+            # 数据示例（仅供参考格式，不要照搬数据）
+
+
+            # 告警派单工单报告
+
+
+            ## 一、派单决策汇总
+
+
+            | 工单编号 | 涉及设备 | 设备类型 | 告警现象 | 事件类型 | 影响范围 | 优先级 | 命中策略ID | 自动派单 | 进入故障诊断
+            | 派单专业 | SLA要求 |
+
+            | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+            |
+
+            | WO-20260309-001 | ONU_01 | ONU | 光链路劣化 | 光链路劣化 | 影响 3 个用户 / 1 台下挂设备
+            | P2 | DR021 | 是 | 是 | 家宽接入维护组 | 30分钟响应，4小时现场处理 |
+
+
+            ## 二、标准派单工单
+
+
+            - 工单标题：[ONU_01] 告警-光链路劣化
+
+            - 工单级别：P2
+
+            - 故障设备：ONU_01
+
+            - 设备类型：ONU
+
+            - 专业域：FIXED
+
+            - 告警时间：2026-03-09 17:52:35 至 2026-03-09 17:57:35
+
+            - 告警级别：critical
+
+            - 告警现象：光链路劣化
+
+            - 影响范围：影响 3 个用户 / 1 台下挂设备；父节点链：SPLITTER_01 → OLT_01 → PTN_03；下挂设备类型分布：Router×1、Fixed
+            UE×3
+
+            - 命中策略ID：DR021
+
+            - 派单专业：家宽接入维护组
+
+            - SLA要求：30分钟响应，4小时现场处理
+
+            - 派单原因：ONU_01出现光链路劣化，最高级别CRITICAL，位于拓扑链SPLITTER_01→OLT_01→PTN_03，下挂3个用户，命中策略DR021，按策略规则派家宽接入维护组
+
+            - 需补充证据：收发光功率、分光器、皮线光缆、用户投诉
+
+            - 是否自动派单：是
+
+            - 是否进入故障诊断：是
+
+            - 给故障诊断工作流的输入摘要：故障设备ONU_01，告警ONU_01光链路劣化_HIGH CRITICAL，拓扑父链SPLITTER_01→OLT_01→PTN_03，下挂设备ROUTER_01/UE_01/UE_02/UE_03，影响用户数3，待判断：光链路--
+            劣化是否源于分光器或主干光缆；ONU_01自身光模块或入户皮线是否异常'
+        - id: 1d23e5d1-2a91-4850-8dd8-bfa4c87eefc7
+          role: user
+          text: '请根据以下输入数据生成《告警派单工单报告》。
+
+
+            【告警事件数据 events】
+
+            {{#1787625395763.evidence_pack#}}
+
+
+            【派单策略检索结果 retrieval_results】
+
+            {{#context#}}'
+        reasoning_format: separated
+        selected: false
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1787651571274'
+      position:
+        x: 1729.8020778544535
+        y: 192.77410781218896
+      positionAbsolute:
+        x: 1729.8020778544535
+        y: 192.77410781218896
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: 22fe12c9-540d-455d-9076-b3b3eaa53166
+            value: ''
+            varType: string
+            variable_selector:
+            - '1787625395763'
+            - validation_errors
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 校验
+        type: if-else
+      height: 140
+      id: '1787714769853'
+      position:
+        x: 1025
+        y: 311
+      positionAbsolute:
+        x: 1025
+        y: 311
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1787625395763'
+          - validation_errors
+          value_type: array[string]
+          variable: dispatch_queries
+        selected: false
+        title: 输出校验结果
+        type: end
+      height: 88
+      id: '1787714848254'
+      position:
+        x: 1130.1284881410124
+        y: 638.7360271973397
+      positionAbsolute:
+        x: 1130.1284881410124
+        y: 638.7360271973397
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -1065.4599277645477
+      y: -226.01705879609085
+      zoom: 1.0717734625362945
+  rag_pipeline_variables: []
