@@ -1,0 +1,1867 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: workflow
+  name: 数据清洗1
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 10
+        file_size_limit: 30
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 15
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787101850587-source-1787102139441-target
+      selected: false
+      source: '1787101850587'
+      sourceHandle: source
+      target: '1787102139441'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787101871766-source-1787102164750-target
+      selected: false
+      source: '1787101871766'
+      sourceHandle: source
+      target: '1787102164750'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787101876964-source-1787102189176-target
+      selected: false
+      source: '1787101876964'
+      sourceHandle: source
+      target: '1787102189176'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787101881802-source-1787102206372-target
+      selected: false
+      source: '1787101881802'
+      sourceHandle: source
+      target: '1787102206372'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: code
+      id: 1787101885812-source-1787102221057-target
+      selected: false
+      source: '1787101885812'
+      sourceHandle: source
+      target: '1787102221057'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787102139441-source-1787104353033-target
+      selected: false
+      source: '1787102139441'
+      sourceHandle: source
+      target: '1787104353033'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787104353033-source-1787104550229-target
+      selected: false
+      source: '1787104353033'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787102164750-source-1787104678508-target
+      selected: false
+      source: '1787102164750'
+      sourceHandle: source
+      target: '1787104678508'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787102189176-source-1787104694632-target
+      selected: false
+      source: '1787102189176'
+      sourceHandle: source
+      target: '1787104694632'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787102206372-source-1787104710231-target
+      selected: false
+      source: '1787102206372'
+      sourceHandle: source
+      target: '1787104710231'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787102221057-source-1787104723160-target
+      selected: false
+      source: '1787102221057'
+      sourceHandle: source
+      target: '1787104723160'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787104678508-source-1787104550229-target
+      selected: false
+      source: '1787104678508'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787104694632-source-1787104550229-target
+      selected: false
+      source: '1787104694632'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787104710231-source-1787104550229-target
+      selected: false
+      source: '1787104710231'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787104723160-source-1787104550229-target
+      selected: false
+      source: '1787104723160'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787065204375-source-1787101850587-target
+      source: '1787065204375'
+      sourceHandle: source
+      target: '1787101850587'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787065204375-source-1787101871766-target
+      source: '1787065204375'
+      sourceHandle: source
+      target: '1787101871766'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787065204375-source-1787101876964-target
+      source: '1787065204375'
+      sourceHandle: source
+      target: '1787101876964'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787065204375-source-1787101881802-target
+      source: '1787065204375'
+      sourceHandle: source
+      target: '1787101881802'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: document-extractor
+      id: 1787065204375-source-1787101885812-target
+      source: '1787065204375'
+      sourceHandle: source
+      target: '1787101885812'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1787102139441-source-1787534939015-target
+      source: '1787102139441'
+      sourceHandle: source
+      target: '1787534939015'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1787102164750-source-1787534939015-target
+      source: '1787102164750'
+      sourceHandle: source
+      target: '1787534939015'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1787102189176-source-1787534939015-target
+      source: '1787102189176'
+      sourceHandle: source
+      target: '1787534939015'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1787102206372-source-1787534939015-target
+      source: '1787102206372'
+      sourceHandle: source
+      target: '1787534939015'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: 1787102221057-source-1787534939015-target
+      source: '1787102221057'
+      sourceHandle: source
+      target: '1787534939015'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 1787534939015-source-1787536176080-target
+      source: '1787534939015'
+      sourceHandle: source
+      target: '1787536176080'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: end
+      id: 1787536176080-source-1787104550229-target
+      source: '1787536176080'
+      sourceHandle: source
+      target: '1787104550229'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: complaint_record
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: complaint_record
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: complaint_handling
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: complaint_handling
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: customer_info
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: customer_info
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: employee_info
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: employee_info
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: false
+          hint: ''
+          label: hall_info
+          options: []
+          placeholder: ''
+          required: true
+          type: file
+          variable: hall_info
+      height: 213
+      id: '1787065204375'
+      position:
+        x: -226.3101377682529
+        y: 477.2278637145862
+      positionAbsolute:
+        x: -226.3101377682529
+        y: 477.2278637145862
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 文档提取器1
+        type: document-extractor
+        variable_selector:
+        - '1787065204375'
+        - complaint_record
+      height: 104
+      id: '1787101850587'
+      position:
+        x: 382.11431890025756
+        y: 187.00580957152727
+      positionAbsolute:
+        x: 382.11431890025756
+        y: 187.00580957152727
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 文档提取器 2
+        type: document-extractor
+        variable_selector:
+        - '1787065204375'
+        - complaint_handling
+      height: 104
+      id: '1787101871766'
+      position:
+        x: 382.11431890025756
+        y: 305.97427368289203
+      positionAbsolute:
+        x: 382.11431890025756
+        y: 305.97427368289203
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 文档提取器 3
+        type: document-extractor
+        variable_selector:
+        - '1787065204375'
+        - customer_info
+      height: 104
+      id: '1787101876964'
+      position:
+        x: 382.11431890025756
+        y: 422.18869008912526
+      positionAbsolute:
+        x: 382.11431890025756
+        y: 422.18869008912526
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 文档提取器 4
+        type: document-extractor
+        variable_selector:
+        - '1787065204375'
+        - employee_info
+      height: 104
+      id: '1787101881802'
+      position:
+        x: 382.11431890025756
+        y: 554.2421417167448
+      positionAbsolute:
+        x: 382.11431890025756
+        y: 554.2421417167448
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_array_file: false
+        selected: false
+        title: 文档提取器 5
+        type: document-extractor
+        variable_selector:
+        - '1787065204375'
+        - hall_info
+      height: 104
+      id: '1787101885812'
+      position:
+        x: 377.4491539425735
+        y: 690.0277253105114
+      positionAbsolute:
+        x: 377.4491539425735
+        y: 690.0277253105114
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import re\nfrom typing import List, Dict\n\n# =====================\
+          \ 配置区 请勿修改 =====================\n# 列名映射：原始中文/别名 -> 标准snake_case字段\nCOLUMN_MAPPING\
+          \ = {\n    \"客户id\": \"customer_id\",\n    \"客户编号\": \"customer_id\",\n\
+          \    \"投诉id\": \"complaint_id\",\n    \"员工姓名\": \"handler_name\",\n    \"\
+          员工id\": \"handler_id\",\n    \"handler_id\": \"handler_id\",\n    \"营业厅id\"\
+          : \"hall_id\",\n    \"hall_id\": \"hall_id\",\n    \"营业厅名称\": \"hall_name\"\
+          ,\n    \"区域\": \"region\",\n    \"接单时间\": \"accept_time\",\n    \"套餐类型\"\
+          : \"package_type\",\n    \"投诉内容\": \"complaint_description\",\n    \"投诉类型\"\
+          : \"complaint_type\",\n    \"投诉子类\": \"complaint_subtype\",\n    \"客户等级\"\
+          : \"customer_level\",\n    \"客户反馈\": \"customer_feedback\",\n    \"客户姓名\"\
+          : \"customer_name\",\n    \"客户名称\": \"customer_name\",\n    \"customer_name\"\
+          : \"customer_name\"\n}\n\n# 各表强制输出字段顺序\nTABLE_COLUMN_ORDER: Dict[str, List[str]]\
+          \ = {\n    \"complaint_record\": [\n        \"complaint_id\", \"accept_time\"\
+          , \"customer_id\", \"handler_name\",\n        \"package_type\", \"complaint_description\"\
+          , \"complaint_type\", \"complaint_subtype\"\n    ],\n    \"complaint_handling\"\
+          : [\n        \"complaint_id\", \"handler_id\", \"hall_id\", \"accept_time\"\
+          ,\n        \"customer_feedback\", \"customer_name\"\n    ],\n    \"customer_info\"\
+          : [\n        \"customer_id\", \"customer_name\", \"customer_level\"\n  \
+          \  ],\n    \"employee_info\": [\n        \"handler_id\", \"handler_name\"\
+          , \"hall_id\"\n    ],\n    \"hall_info\": [\n        \"hall_id\", \"hall_name\"\
+          , \"region\"\n    ]\n}\n# ==========================================================\n\
+          \n\ndef normalize_header(raw_header: str) -> str:\n    \"\"\"\n    标准化表头：去除空格、转小写、匹配映射字典\n\
+          \    \"\"\"\n    s = raw_header.strip().lower()\n    s = re.sub(r\"\\s+\"\
+          , \"\", s)\n    if s in COLUMN_MAPPING:\n        return COLUMN_MAPPING[s]\n\
+          \    # 已经是蛇形命名直接返回\n    snake_check = re.fullmatch(r\"[a-z_]+\", s)\n  \
+          \  if snake_check:\n        return s\n    # 未命中映射原样返回(后续作为额外字段)\n    return\
+          \ raw_header.strip()\n\n\ndef parse_markdown_table(md_text: str):\n    \"\
+          \"\"\n    解析markdown表格，返回 headers, rows\n    \"\"\"\n    lines = [line.rstrip()\
+          \ for line in md_text.splitlines() if line.strip()]\n    if len(lines) <\
+          \ 2:\n        return [], []\n    # 跳过分隔行 |---|---|\n    header_line = lines[0]\n\
+          \    data_lines = []\n    for ln in lines[1:]:\n        if re.fullmatch(r\"\
+          [\\|\\-\\s]+\", ln):\n            continue\n        data_lines.append(ln)\n\
+          \n    def split_pipe(line: str) -> List[str]:\n        parts = [p.strip()\
+          \ for p in line.split(\"|\")]\n        return [p for p in parts if p]\n\n\
+          \    headers = split_pipe(header_line)\n    rows = [split_pipe(dl) for dl\
+          \ in data_lines]\n    return headers, rows\n\n\ndef build_markdown_table(headers:\
+          \ List[str], rows: List[List[str]]) -> str:\n    \"\"\"\n    根据表头和行数据生成标准markdown表格\n\
+          \    \"\"\"\n    out_lines = []\n    out_lines.append(\"| \" + \" | \".join(headers)\
+          \ + \" |\")\n    out_lines.append(\"| \" + \" | \".join([\"---\"] * len(headers))\
+          \ + \" |\")\n    for r in rows:\n        out_lines.append(\"| \" + \" |\
+          \ \".join(r) + \" |\")\n    return \"\\n\".join(out_lines)\n\n\ndef detect_table_name(mapped_headers:\
+          \ List[str]) -> str | None:\n    \"\"\"\n    通过表头字段集合匹配判断属于哪一张表\n    返回表标识\
+          \ complaint_record / complaint_handling / customer_info / employee_info\
+          \ / hall_info\n    \"\"\"\n    set_h = set(mapped_headers)\n    for table_name,\
+          \ order_list in TABLE_COLUMN_ORDER.items():\n        required = set(order_list)\n\
+          \        hit = set_h & required\n        if len(hit) >= 2:\n           \
+          \ return table_name\n    return None\n\n\ndef reorder_columns(headers_mapped:\
+          \ List[str], rows: List[List[str]], table_name: str):\n    \"\"\"\n    按标准顺序重排列，额外字段追加到末尾\n\
+          \    \"\"\"\n    std_order = TABLE_COLUMN_ORDER[table_name]\n    # 构建原始表头\
+          \ -> 索引\n    header2idx = {h: i for i, h in enumerate(headers_mapped)}\n\
+          \n    new_header = []\n    new_col_index = []\n    # 先放标准字段(存在就加入)\n   \
+          \ for col in std_order:\n        if col in header2idx and col not in new_header:\n\
+          \            new_header.append(col)\n            new_col_index.append(header2idx[col])\n\
+          \    # 剩余额外字段追加到尾部\n    for idx, h in enumerate(headers_mapped):\n     \
+          \   if h not in new_header:\n            new_header.append(h)\n        \
+          \    new_col_index.append(idx)\n    # 重排每一行单元格数据\n    new_rows = []\n  \
+          \  for row in rows:\n        new_row = [row[i] if i < len(row) else \"\"\
+          \ for i in new_col_index]\n        new_rows.append(new_row)\n    return\
+          \ new_header, new_rows\n\n\ndef main(arr: str) -> dict:\n    \"\"\"\n  \
+          \  Dify入口主函数\n    :param arr: 输入markdown表格文本字符串\n    :return: {\"result\"\
+          : 输出markdown表格文本}\n    \"\"\"\n    raw_headers, data_rows = parse_markdown_table(arr)\n\
+          \    if not raw_headers:\n        return {\"result\": arr}\n\n    # 表头标准化映射\n\
+          \    mapped_headers = [normalize_header(h) for h in raw_headers]\n    #\
+          \ 识别表类型\n    table_name = detect_table_name(mapped_headers)\n    if table_name\
+          \ and table_name in TABLE_COLUMN_ORDER:\n        final_headers, final_rows\
+          \ = reorder_columns(mapped_headers, data_rows, table_name)\n    else:\n\
+          \        # 无法识别表：仅做表头重命名，不调整顺序\n        final_headers = mapped_headers\n\
+          \        final_rows = data_rows\n\n    result = build_markdown_table(final_headers,\
+          \ final_rows)\n    return {\"result\": result}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行1
+        type: code
+        variables:
+        - value_selector:
+          - '1787101850587'
+          - text
+          value_type: string
+          variable: arr
+      height: 52
+      id: '1787102139441'
+      position:
+        x: 684.1143189002576
+        y: 187.00580957152727
+      positionAbsolute:
+        x: 684.1143189002576
+        y: 187.00580957152727
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import re\nfrom typing import List, Dict\n\n# =====================\
+          \ 配置区 请勿修改 =====================\n# 列名映射：原始中文/别名 -> 标准snake_case字段\nCOLUMN_MAPPING\
+          \ = {\n    \"客户id\": \"customer_id\",\n    \"客户编号\": \"customer_id\",\n\
+          \    \"投诉id\": \"complaint_id\",\n    \"员工姓名\": \"handler_name\",\n    \"\
+          员工id\": \"handler_id\",\n    \"handler_id\": \"handler_id\",\n    \"营业厅id\"\
+          : \"hall_id\",\n    \"hall_id\": \"hall_id\",\n    \"营业厅名称\": \"hall_name\"\
+          ,\n    \"区域\": \"region\",\n    \"接单时间\": \"accept_time\",\n    \"套餐类型\"\
+          : \"package_type\",\n    \"投诉内容\": \"complaint_description\",\n    \"投诉类型\"\
+          : \"complaint_type\",\n    \"投诉子类\": \"complaint_subtype\",\n    \"客户等级\"\
+          : \"customer_level\",\n    \"客户反馈\": \"customer_feedback\",\n    \"客户姓名\"\
+          : \"customer_name\",\n    \"客户名称\": \"customer_name\",\n    \"customer_name\"\
+          : \"customer_name\"\n}\n\n# 各表强制输出字段顺序\nTABLE_COLUMN_ORDER: Dict[str, List[str]]\
+          \ = {\n    \"complaint_record\": [\n        \"complaint_id\", \"accept_time\"\
+          , \"customer_id\", \"handler_name\",\n        \"package_type\", \"complaint_description\"\
+          , \"complaint_type\", \"complaint_subtype\"\n    ],\n    \"complaint_handling\"\
+          : [\n        \"complaint_id\", \"handler_id\", \"hall_id\", \"accept_time\"\
+          ,\n        \"customer_feedback\", \"customer_name\"\n    ],\n    \"customer_info\"\
+          : [\n        \"customer_id\", \"customer_name\", \"customer_level\"\n  \
+          \  ],\n    \"employee_info\": [\n        \"handler_id\", \"handler_name\"\
+          , \"hall_id\"\n    ],\n    \"hall_info\": [\n        \"hall_id\", \"hall_name\"\
+          , \"region\"\n    ]\n}\n# ==========================================================\n\
+          \n\ndef normalize_header(raw_header: str) -> str:\n    \"\"\"\n    标准化表头：去除空格、转小写、匹配映射字典\n\
+          \    \"\"\"\n    s = raw_header.strip().lower()\n    s = re.sub(r\"\\s+\"\
+          , \"\", s)\n    if s in COLUMN_MAPPING:\n        return COLUMN_MAPPING[s]\n\
+          \    # 已经是蛇形命名直接返回\n    snake_check = re.fullmatch(r\"[a-z_]+\", s)\n  \
+          \  if snake_check:\n        return s\n    # 未命中映射原样返回(后续作为额外字段)\n    return\
+          \ raw_header.strip()\n\n\ndef parse_markdown_table(md_text: str):\n    \"\
+          \"\"\n    解析markdown表格，返回 headers, rows\n    \"\"\"\n    lines = [line.rstrip()\
+          \ for line in md_text.splitlines() if line.strip()]\n    if len(lines) <\
+          \ 2:\n        return [], []\n    # 跳过分隔行 |---|---|\n    header_line = lines[0]\n\
+          \    data_lines = []\n    for ln in lines[1:]:\n        if re.fullmatch(r\"\
+          [\\|\\-\\s]+\", ln):\n            continue\n        data_lines.append(ln)\n\
+          \n    def split_pipe(line: str) -> List[str]:\n        parts = [p.strip()\
+          \ for p in line.split(\"|\")]\n        return [p for p in parts if p]\n\n\
+          \    headers = split_pipe(header_line)\n    rows = [split_pipe(dl) for dl\
+          \ in data_lines]\n    return headers, rows\n\n\ndef build_markdown_table(headers:\
+          \ List[str], rows: List[List[str]]) -> str:\n    \"\"\"\n    根据表头和行数据生成标准markdown表格\n\
+          \    \"\"\"\n    out_lines = []\n    out_lines.append(\"| \" + \" | \".join(headers)\
+          \ + \" |\")\n    out_lines.append(\"| \" + \" | \".join([\"---\"] * len(headers))\
+          \ + \" |\")\n    for r in rows:\n        out_lines.append(\"| \" + \" |\
+          \ \".join(r) + \" |\")\n    return \"\\n\".join(out_lines)\n\n\ndef detect_table_name(mapped_headers:\
+          \ List[str]) -> str | None:\n    \"\"\"\n    通过表头字段集合匹配判断属于哪一张表\n    返回表标识\
+          \ complaint_record / complaint_handling / customer_info / employee_info\
+          \ / hall_info\n    \"\"\"\n    set_h = set(mapped_headers)\n    for table_name,\
+          \ order_list in TABLE_COLUMN_ORDER.items():\n        required = set(order_list)\n\
+          \        hit = set_h & required\n        if len(hit) >= 2:\n           \
+          \ return table_name\n    return None\n\n\ndef reorder_columns(headers_mapped:\
+          \ List[str], rows: List[List[str]], table_name: str):\n    \"\"\"\n    按标准顺序重排列，额外字段追加到末尾\n\
+          \    \"\"\"\n    std_order = TABLE_COLUMN_ORDER[table_name]\n    # 构建原始表头\
+          \ -> 索引\n    header2idx = {h: i for i, h in enumerate(headers_mapped)}\n\
+          \n    new_header = []\n    new_col_index = []\n    # 先放标准字段(存在就加入)\n   \
+          \ for col in std_order:\n        if col in header2idx and col not in new_header:\n\
+          \            new_header.append(col)\n            new_col_index.append(header2idx[col])\n\
+          \    # 剩余额外字段追加到尾部\n    for idx, h in enumerate(headers_mapped):\n     \
+          \   if h not in new_header:\n            new_header.append(h)\n        \
+          \    new_col_index.append(idx)\n    # 重排每一行单元格数据\n    new_rows = []\n  \
+          \  for row in rows:\n        new_row = [row[i] if i < len(row) else \"\"\
+          \ for i in new_col_index]\n        new_rows.append(new_row)\n    return\
+          \ new_header, new_rows\n\n\ndef main(arr: str) -> dict:\n    \"\"\"\n  \
+          \  Dify入口主函数\n    :param arr: 输入markdown表格文本字符串\n    :return: {\"result\"\
+          : 输出markdown表格文本}\n    \"\"\"\n    raw_headers, data_rows = parse_markdown_table(arr)\n\
+          \    if not raw_headers:\n        return {\"result\": arr}\n\n    # 表头标准化映射\n\
+          \    mapped_headers = [normalize_header(h) for h in raw_headers]\n    #\
+          \ 识别表类型\n    table_name = detect_table_name(mapped_headers)\n    if table_name\
+          \ and table_name in TABLE_COLUMN_ORDER:\n        final_headers, final_rows\
+          \ = reorder_columns(mapped_headers, data_rows, table_name)\n    else:\n\
+          \        # 无法识别表：仅做表头重命名，不调整顺序\n        final_headers = mapped_headers\n\
+          \        final_rows = data_rows\n\n    result = build_markdown_table(final_headers,\
+          \ final_rows)\n    return {\"result\": result}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 2
+        type: code
+        variables:
+        - value_selector:
+          - '1787101871766'
+          - text
+          value_type: string
+          variable: arr
+      height: 52
+      id: '1787102164750'
+      position:
+        x: 684.1143189002576
+        y: 305.97427368289203
+      positionAbsolute:
+        x: 684.1143189002576
+        y: 305.97427368289203
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import re\nfrom typing import List, Dict\n\n# =====================\
+          \ 配置区 请勿修改 =====================\n# 列名映射：原始中文/别名 -> 标准snake_case字段\nCOLUMN_MAPPING\
+          \ = {\n    \"客户id\": \"customer_id\",\n    \"客户编号\": \"customer_id\",\n\
+          \    \"投诉id\": \"complaint_id\",\n    \"员工姓名\": \"handler_name\",\n    \"\
+          员工id\": \"handler_id\",\n    \"handler_id\": \"handler_id\",\n    \"营业厅id\"\
+          : \"hall_id\",\n    \"hall_id\": \"hall_id\",\n    \"营业厅名称\": \"hall_name\"\
+          ,\n    \"区域\": \"region\",\n    \"接单时间\": \"accept_time\",\n    \"套餐类型\"\
+          : \"package_type\",\n    \"投诉内容\": \"complaint_description\",\n    \"投诉类型\"\
+          : \"complaint_type\",\n    \"投诉子类\": \"complaint_subtype\",\n    \"客户等级\"\
+          : \"customer_level\",\n    \"客户反馈\": \"customer_feedback\",\n    \"客户姓名\"\
+          : \"customer_name\",\n    \"客户名称\": \"customer_name\",\n    \"customer_name\"\
+          : \"customer_name\"\n}\n\n# 各表强制输出字段顺序\nTABLE_COLUMN_ORDER: Dict[str, List[str]]\
+          \ = {\n    \"complaint_record\": [\n        \"complaint_id\", \"accept_time\"\
+          , \"customer_id\", \"handler_name\",\n        \"package_type\", \"complaint_description\"\
+          , \"complaint_type\", \"complaint_subtype\"\n    ],\n    \"complaint_handling\"\
+          : [\n        \"complaint_id\", \"handler_id\", \"hall_id\", \"accept_time\"\
+          ,\n        \"customer_feedback\", \"customer_name\"\n    ],\n    \"customer_info\"\
+          : [\n        \"customer_id\", \"customer_name\", \"customer_level\"\n  \
+          \  ],\n    \"employee_info\": [\n        \"handler_id\", \"handler_name\"\
+          , \"hall_id\"\n    ],\n    \"hall_info\": [\n        \"hall_id\", \"hall_name\"\
+          , \"region\"\n    ]\n}\n# ==========================================================\n\
+          \n\ndef normalize_header(raw_header: str) -> str:\n    \"\"\"\n    标准化表头：去除空格、转小写、匹配映射字典\n\
+          \    \"\"\"\n    s = raw_header.strip().lower()\n    s = re.sub(r\"\\s+\"\
+          , \"\", s)\n    if s in COLUMN_MAPPING:\n        return COLUMN_MAPPING[s]\n\
+          \    # 已经是蛇形命名直接返回\n    snake_check = re.fullmatch(r\"[a-z_]+\", s)\n  \
+          \  if snake_check:\n        return s\n    # 未命中映射原样返回(后续作为额外字段)\n    return\
+          \ raw_header.strip()\n\n\ndef parse_markdown_table(md_text: str):\n    \"\
+          \"\"\n    解析markdown表格，返回 headers, rows\n    \"\"\"\n    lines = [line.rstrip()\
+          \ for line in md_text.splitlines() if line.strip()]\n    if len(lines) <\
+          \ 2:\n        return [], []\n    # 跳过分隔行 |---|---|\n    header_line = lines[0]\n\
+          \    data_lines = []\n    for ln in lines[1:]:\n        if re.fullmatch(r\"\
+          [\\|\\-\\s]+\", ln):\n            continue\n        data_lines.append(ln)\n\
+          \n    def split_pipe(line: str) -> List[str]:\n        parts = [p.strip()\
+          \ for p in line.split(\"|\")]\n        return [p for p in parts if p]\n\n\
+          \    headers = split_pipe(header_line)\n    rows = [split_pipe(dl) for dl\
+          \ in data_lines]\n    return headers, rows\n\n\ndef build_markdown_table(headers:\
+          \ List[str], rows: List[List[str]]) -> str:\n    \"\"\"\n    根据表头和行数据生成标准markdown表格\n\
+          \    \"\"\"\n    out_lines = []\n    out_lines.append(\"| \" + \" | \".join(headers)\
+          \ + \" |\")\n    out_lines.append(\"| \" + \" | \".join([\"---\"] * len(headers))\
+          \ + \" |\")\n    for r in rows:\n        out_lines.append(\"| \" + \" |\
+          \ \".join(r) + \" |\")\n    return \"\\n\".join(out_lines)\n\n\ndef detect_table_name(mapped_headers:\
+          \ List[str]) -> str | None:\n    \"\"\"\n    通过表头字段集合匹配判断属于哪一张表\n    返回表标识\
+          \ complaint_record / complaint_handling / customer_info / employee_info\
+          \ / hall_info\n    \"\"\"\n    set_h = set(mapped_headers)\n    for table_name,\
+          \ order_list in TABLE_COLUMN_ORDER.items():\n        required = set(order_list)\n\
+          \        hit = set_h & required\n        if len(hit) >= 2:\n           \
+          \ return table_name\n    return None\n\n\ndef reorder_columns(headers_mapped:\
+          \ List[str], rows: List[List[str]], table_name: str):\n    \"\"\"\n    按标准顺序重排列，额外字段追加到末尾\n\
+          \    \"\"\"\n    std_order = TABLE_COLUMN_ORDER[table_name]\n    # 构建原始表头\
+          \ -> 索引\n    header2idx = {h: i for i, h in enumerate(headers_mapped)}\n\
+          \n    new_header = []\n    new_col_index = []\n    # 先放标准字段(存在就加入)\n   \
+          \ for col in std_order:\n        if col in header2idx and col not in new_header:\n\
+          \            new_header.append(col)\n            new_col_index.append(header2idx[col])\n\
+          \    # 剩余额外字段追加到尾部\n    for idx, h in enumerate(headers_mapped):\n     \
+          \   if h not in new_header:\n            new_header.append(h)\n        \
+          \    new_col_index.append(idx)\n    # 重排每一行单元格数据\n    new_rows = []\n  \
+          \  for row in rows:\n        new_row = [row[i] if i < len(row) else \"\"\
+          \ for i in new_col_index]\n        new_rows.append(new_row)\n    return\
+          \ new_header, new_rows\n\n\ndef main(arr: str) -> dict:\n    \"\"\"\n  \
+          \  Dify入口主函数\n    :param arr: 输入markdown表格文本字符串\n    :return: {\"result\"\
+          : 输出markdown表格文本}\n    \"\"\"\n    raw_headers, data_rows = parse_markdown_table(arr)\n\
+          \    if not raw_headers:\n        return {\"result\": arr}\n\n    # 表头标准化映射\n\
+          \    mapped_headers = [normalize_header(h) for h in raw_headers]\n    #\
+          \ 识别表类型\n    table_name = detect_table_name(mapped_headers)\n    if table_name\
+          \ and table_name in TABLE_COLUMN_ORDER:\n        final_headers, final_rows\
+          \ = reorder_columns(mapped_headers, data_rows, table_name)\n    else:\n\
+          \        # 无法识别表：仅做表头重命名，不调整顺序\n        final_headers = mapped_headers\n\
+          \        final_rows = data_rows\n\n    result = build_markdown_table(final_headers,\
+          \ final_rows)\n    return {\"result\": result}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 3
+        type: code
+        variables:
+        - value_selector:
+          - '1787101876964'
+          - text
+          value_type: string
+          variable: arr
+      height: 52
+      id: '1787102189176'
+      position:
+        x: 684.1143189002576
+        y: 422.18869008912526
+      positionAbsolute:
+        x: 684.1143189002576
+        y: 422.18869008912526
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import re\nfrom typing import List, Dict\n\n# =====================\
+          \ 配置区 请勿修改 =====================\n# 列名映射：原始中文/别名 -> 标准snake_case字段\nCOLUMN_MAPPING\
+          \ = {\n    \"客户id\": \"customer_id\",\n    \"客户编号\": \"customer_id\",\n\
+          \    \"投诉id\": \"complaint_id\",\n    \"员工姓名\": \"handler_name\",\n    \"\
+          员工id\": \"handler_id\",\n    \"handler_id\": \"handler_id\",\n    \"营业厅id\"\
+          : \"hall_id\",\n    \"hall_id\": \"hall_id\",\n    \"营业厅名称\": \"hall_name\"\
+          ,\n    \"区域\": \"region\",\n    \"接单时间\": \"accept_time\",\n    \"套餐类型\"\
+          : \"package_type\",\n    \"投诉内容\": \"complaint_description\",\n    \"投诉类型\"\
+          : \"complaint_type\",\n    \"投诉子类\": \"complaint_subtype\",\n    \"客户等级\"\
+          : \"customer_level\",\n    \"客户反馈\": \"customer_feedback\",\n    \"客户姓名\"\
+          : \"customer_name\",\n    \"客户名称\": \"customer_name\",\n    \"customer_name\"\
+          : \"customer_name\"\n}\n\n# 各表强制输出字段顺序\nTABLE_COLUMN_ORDER: Dict[str, List[str]]\
+          \ = {\n    \"complaint_record\": [\n        \"complaint_id\", \"accept_time\"\
+          , \"customer_id\", \"handler_name\",\n        \"package_type\", \"complaint_description\"\
+          , \"complaint_type\", \"complaint_subtype\"\n    ],\n    \"complaint_handling\"\
+          : [\n        \"complaint_id\", \"handler_id\", \"hall_id\", \"accept_time\"\
+          ,\n        \"customer_feedback\", \"customer_name\"\n    ],\n    \"customer_info\"\
+          : [\n        \"customer_id\", \"customer_name\", \"customer_level\"\n  \
+          \  ],\n    \"employee_info\": [\n        \"handler_id\", \"handler_name\"\
+          , \"hall_id\"\n    ],\n    \"hall_info\": [\n        \"hall_id\", \"hall_name\"\
+          , \"region\"\n    ]\n}\n# ==========================================================\n\
+          \n\ndef normalize_header(raw_header: str) -> str:\n    \"\"\"\n    标准化表头：去除空格、转小写、匹配映射字典\n\
+          \    \"\"\"\n    s = raw_header.strip().lower()\n    s = re.sub(r\"\\s+\"\
+          , \"\", s)\n    if s in COLUMN_MAPPING:\n        return COLUMN_MAPPING[s]\n\
+          \    # 已经是蛇形命名直接返回\n    snake_check = re.fullmatch(r\"[a-z_]+\", s)\n  \
+          \  if snake_check:\n        return s\n    # 未命中映射原样返回(后续作为额外字段)\n    return\
+          \ raw_header.strip()\n\n\ndef parse_markdown_table(md_text: str):\n    \"\
+          \"\"\n    解析markdown表格，返回 headers, rows\n    \"\"\"\n    lines = [line.rstrip()\
+          \ for line in md_text.splitlines() if line.strip()]\n    if len(lines) <\
+          \ 2:\n        return [], []\n    # 跳过分隔行 |---|---|\n    header_line = lines[0]\n\
+          \    data_lines = []\n    for ln in lines[1:]:\n        if re.fullmatch(r\"\
+          [\\|\\-\\s]+\", ln):\n            continue\n        data_lines.append(ln)\n\
+          \n    def split_pipe(line: str) -> List[str]:\n        parts = [p.strip()\
+          \ for p in line.split(\"|\")]\n        return [p for p in parts if p]\n\n\
+          \    headers = split_pipe(header_line)\n    rows = [split_pipe(dl) for dl\
+          \ in data_lines]\n    return headers, rows\n\n\ndef build_markdown_table(headers:\
+          \ List[str], rows: List[List[str]]) -> str:\n    \"\"\"\n    根据表头和行数据生成标准markdown表格\n\
+          \    \"\"\"\n    out_lines = []\n    out_lines.append(\"| \" + \" | \".join(headers)\
+          \ + \" |\")\n    out_lines.append(\"| \" + \" | \".join([\"---\"] * len(headers))\
+          \ + \" |\")\n    for r in rows:\n        out_lines.append(\"| \" + \" |\
+          \ \".join(r) + \" |\")\n    return \"\\n\".join(out_lines)\n\n\ndef detect_table_name(mapped_headers:\
+          \ List[str]) -> str | None:\n    \"\"\"\n    通过表头字段集合匹配判断属于哪一张表\n    返回表标识\
+          \ complaint_record / complaint_handling / customer_info / employee_info\
+          \ / hall_info\n    \"\"\"\n    set_h = set(mapped_headers)\n    for table_name,\
+          \ order_list in TABLE_COLUMN_ORDER.items():\n        required = set(order_list)\n\
+          \        hit = set_h & required\n        if len(hit) >= 2:\n           \
+          \ return table_name\n    return None\n\n\ndef reorder_columns(headers_mapped:\
+          \ List[str], rows: List[List[str]], table_name: str):\n    \"\"\"\n    按标准顺序重排列，额外字段追加到末尾\n\
+          \    \"\"\"\n    std_order = TABLE_COLUMN_ORDER[table_name]\n    # 构建原始表头\
+          \ -> 索引\n    header2idx = {h: i for i, h in enumerate(headers_mapped)}\n\
+          \n    new_header = []\n    new_col_index = []\n    # 先放标准字段(存在就加入)\n   \
+          \ for col in std_order:\n        if col in header2idx and col not in new_header:\n\
+          \            new_header.append(col)\n            new_col_index.append(header2idx[col])\n\
+          \    # 剩余额外字段追加到尾部\n    for idx, h in enumerate(headers_mapped):\n     \
+          \   if h not in new_header:\n            new_header.append(h)\n        \
+          \    new_col_index.append(idx)\n    # 重排每一行单元格数据\n    new_rows = []\n  \
+          \  for row in rows:\n        new_row = [row[i] if i < len(row) else \"\"\
+          \ for i in new_col_index]\n        new_rows.append(new_row)\n    return\
+          \ new_header, new_rows\n\n\ndef main(arr: str) -> dict:\n    \"\"\"\n  \
+          \  Dify入口主函数\n    :param arr: 输入markdown表格文本字符串\n    :return: {\"result\"\
+          : 输出markdown表格文本}\n    \"\"\"\n    raw_headers, data_rows = parse_markdown_table(arr)\n\
+          \    if not raw_headers:\n        return {\"result\": arr}\n\n    # 表头标准化映射\n\
+          \    mapped_headers = [normalize_header(h) for h in raw_headers]\n    #\
+          \ 识别表类型\n    table_name = detect_table_name(mapped_headers)\n    if table_name\
+          \ and table_name in TABLE_COLUMN_ORDER:\n        final_headers, final_rows\
+          \ = reorder_columns(mapped_headers, data_rows, table_name)\n    else:\n\
+          \        # 无法识别表：仅做表头重命名，不调整顺序\n        final_headers = mapped_headers\n\
+          \        final_rows = data_rows\n\n    result = build_markdown_table(final_headers,\
+          \ final_rows)\n    return {\"result\": result}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 4
+        type: code
+        variables:
+        - value_selector:
+          - '1787101881802'
+          - text
+          value_type: string
+          variable: arr
+      height: 52
+      id: '1787102206372'
+      position:
+        x: 684.1143189002576
+        y: 554.2421417167448
+      positionAbsolute:
+        x: 684.1143189002576
+        y: 554.2421417167448
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import re\nfrom typing import List, Dict\n\n# =====================\
+          \ 配置区 请勿修改 =====================\n# 列名映射：原始中文/别名 -> 标准snake_case字段\nCOLUMN_MAPPING\
+          \ = {\n    \"客户id\": \"customer_id\",\n    \"客户编号\": \"customer_id\",\n\
+          \    \"投诉id\": \"complaint_id\",\n    \"员工姓名\": \"handler_name\",\n    \"\
+          员工id\": \"handler_id\",\n    \"handler_id\": \"handler_id\",\n    \"营业厅id\"\
+          : \"hall_id\",\n    \"hall_id\": \"hall_id\",\n    \"营业厅名称\": \"hall_name\"\
+          ,\n    \"区域\": \"region\",\n    \"接单时间\": \"accept_time\",\n    \"套餐类型\"\
+          : \"package_type\",\n    \"投诉内容\": \"complaint_description\",\n    \"投诉类型\"\
+          : \"complaint_type\",\n    \"投诉子类\": \"complaint_subtype\",\n    \"客户等级\"\
+          : \"customer_level\",\n    \"客户反馈\": \"customer_feedback\",\n    \"客户姓名\"\
+          : \"customer_name\",\n    \"客户名称\": \"customer_name\",\n    \"customer_name\"\
+          : \"customer_name\"\n}\n\n# 各表强制输出字段顺序\nTABLE_COLUMN_ORDER: Dict[str, List[str]]\
+          \ = {\n    \"complaint_record\": [\n        \"complaint_id\", \"accept_time\"\
+          , \"customer_id\", \"handler_name\",\n        \"package_type\", \"complaint_description\"\
+          , \"complaint_type\", \"complaint_subtype\"\n    ],\n    \"complaint_handling\"\
+          : [\n        \"complaint_id\", \"handler_id\", \"hall_id\", \"accept_time\"\
+          ,\n        \"customer_feedback\", \"customer_name\"\n    ],\n    \"customer_info\"\
+          : [\n        \"customer_id\", \"customer_name\", \"customer_level\"\n  \
+          \  ],\n    \"employee_info\": [\n        \"handler_id\", \"handler_name\"\
+          , \"hall_id\"\n    ],\n    \"hall_info\": [\n        \"hall_id\", \"hall_name\"\
+          , \"region\"\n    ]\n}\n# ==========================================================\n\
+          \n\ndef normalize_header(raw_header: str) -> str:\n    \"\"\"\n    标准化表头：去除空格、转小写、匹配映射字典\n\
+          \    \"\"\"\n    s = raw_header.strip().lower()\n    s = re.sub(r\"\\s+\"\
+          , \"\", s)\n    if s in COLUMN_MAPPING:\n        return COLUMN_MAPPING[s]\n\
+          \    # 已经是蛇形命名直接返回\n    snake_check = re.fullmatch(r\"[a-z_]+\", s)\n  \
+          \  if snake_check:\n        return s\n    # 未命中映射原样返回(后续作为额外字段)\n    return\
+          \ raw_header.strip()\n\n\ndef parse_markdown_table(md_text: str):\n    \"\
+          \"\"\n    解析markdown表格，返回 headers, rows\n    \"\"\"\n    lines = [line.rstrip()\
+          \ for line in md_text.splitlines() if line.strip()]\n    if len(lines) <\
+          \ 2:\n        return [], []\n    # 跳过分隔行 |---|---|\n    header_line = lines[0]\n\
+          \    data_lines = []\n    for ln in lines[1:]:\n        if re.fullmatch(r\"\
+          [\\|\\-\\s]+\", ln):\n            continue\n        data_lines.append(ln)\n\
+          \n    def split_pipe(line: str) -> List[str]:\n        parts = [p.strip()\
+          \ for p in line.split(\"|\")]\n        return [p for p in parts if p]\n\n\
+          \    headers = split_pipe(header_line)\n    rows = [split_pipe(dl) for dl\
+          \ in data_lines]\n    return headers, rows\n\n\ndef build_markdown_table(headers:\
+          \ List[str], rows: List[List[str]]) -> str:\n    \"\"\"\n    根据表头和行数据生成标准markdown表格\n\
+          \    \"\"\"\n    out_lines = []\n    out_lines.append(\"| \" + \" | \".join(headers)\
+          \ + \" |\")\n    out_lines.append(\"| \" + \" | \".join([\"---\"] * len(headers))\
+          \ + \" |\")\n    for r in rows:\n        out_lines.append(\"| \" + \" |\
+          \ \".join(r) + \" |\")\n    return \"\\n\".join(out_lines)\n\n\ndef detect_table_name(mapped_headers:\
+          \ List[str]) -> str | None:\n    \"\"\"\n    通过表头字段集合匹配判断属于哪一张表\n    返回表标识\
+          \ complaint_record / complaint_handling / customer_info / employee_info\
+          \ / hall_info\n    \"\"\"\n    set_h = set(mapped_headers)\n    for table_name,\
+          \ order_list in TABLE_COLUMN_ORDER.items():\n        required = set(order_list)\n\
+          \        hit = set_h & required\n        if len(hit) >= 2:\n           \
+          \ return table_name\n    return None\n\n\ndef reorder_columns(headers_mapped:\
+          \ List[str], rows: List[List[str]], table_name: str):\n    \"\"\"\n    按标准顺序重排列，额外字段追加到末尾\n\
+          \    \"\"\"\n    std_order = TABLE_COLUMN_ORDER[table_name]\n    # 构建原始表头\
+          \ -> 索引\n    header2idx = {h: i for i, h in enumerate(headers_mapped)}\n\
+          \n    new_header = []\n    new_col_index = []\n    # 先放标准字段(存在就加入)\n   \
+          \ for col in std_order:\n        if col in header2idx and col not in new_header:\n\
+          \            new_header.append(col)\n            new_col_index.append(header2idx[col])\n\
+          \    # 剩余额外字段追加到尾部\n    for idx, h in enumerate(headers_mapped):\n     \
+          \   if h not in new_header:\n            new_header.append(h)\n        \
+          \    new_col_index.append(idx)\n    # 重排每一行单元格数据\n    new_rows = []\n  \
+          \  for row in rows:\n        new_row = [row[i] if i < len(row) else \"\"\
+          \ for i in new_col_index]\n        new_rows.append(new_row)\n    return\
+          \ new_header, new_rows\n\n\ndef main(arr: str) -> dict:\n    \"\"\"\n  \
+          \  Dify入口主函数\n    :param arr: 输入markdown表格文本字符串\n    :return: {\"result\"\
+          : 输出markdown表格文本}\n    \"\"\"\n    raw_headers, data_rows = parse_markdown_table(arr)\n\
+          \    if not raw_headers:\n        return {\"result\": arr}\n\n    # 表头标准化映射\n\
+          \    mapped_headers = [normalize_header(h) for h in raw_headers]\n    #\
+          \ 识别表类型\n    table_name = detect_table_name(mapped_headers)\n    if table_name\
+          \ and table_name in TABLE_COLUMN_ORDER:\n        final_headers, final_rows\
+          \ = reorder_columns(mapped_headers, data_rows, table_name)\n    else:\n\
+          \        # 无法识别表：仅做表头重命名，不调整顺序\n        final_headers = mapped_headers\n\
+          \        final_rows = data_rows\n\n    result = build_markdown_table(final_headers,\
+          \ final_rows)\n    return {\"result\": result}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 5
+        type: code
+        variables:
+        - value_selector:
+          - '1787101885812'
+          - text
+          value_type: string
+          variable: arr
+      height: 52
+      id: '1787102221057'
+      position:
+        x: 679.4491539425735
+        y: 690.0277253105114
+      positionAbsolute:
+        x: 679.4491539425735
+        y: 690.0277253105114
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Input text of single Markdown table
+            ja_JP: Input text of single Markdown table
+            pt_BR: Input text of single Markdown table
+            zh_Hans: 单个Markdown格式文本
+          label:
+            en_US: Markdown table text
+            ja_JP: Markdown table text
+            pt_BR: Markdown table text
+            zh_Hans: Markdown 表格文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.7.0@edc94235fd722de62fc18c157a67cf01f0bd18adf6bf6b18ff99afa1960a88fd
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: '1'
+        tool_configurations: {}
+        tool_description: 将 Markdown 表格转换为 CSV 文件的工具
+        tool_label: Markdown 表格 ⮕ CSV
+        tool_name: md_to_csv
+        tool_node_version: '2'
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1787102139441.result#}}'
+          output_filename:
+            type: mixed
+            value: step1_complaint_record_transformed
+        type: tool
+      height: 52
+      id: '1787104353033'
+      position:
+        x: 986.1143189002576
+        y: 187.00580957152727
+      positionAbsolute:
+        x: 986.1143189002576
+        y: 187.00580957152727
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1787104353033'
+          - files
+          value_type: array[file]
+          variable: files
+        - value_selector:
+          - '1787104678508'
+          - files
+          value_type: array[file]
+          variable: files_1
+        - value_selector:
+          - '1787104694632'
+          - files
+          value_type: array[file]
+          variable: files_2
+        - value_selector:
+          - '1787104710231'
+          - files
+          value_type: array[file]
+          variable: files_3
+        - value_selector:
+          - '1787104723160'
+          - files
+          value_type: array[file]
+          variable: files_4
+        - value_selector:
+          - '1787534939015'
+          - result
+          value_type: string
+          variable: result
+        selected: false
+        title: 输出
+        type: end
+      height: 218
+      id: '1787104550229'
+      position:
+        x: 1440.6981400412067
+        y: 246.58892534550392
+      positionAbsolute:
+        x: 1440.6981400412067
+        y: 246.58892534550392
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Input text of single Markdown table
+            ja_JP: Input text of single Markdown table
+            pt_BR: Input text of single Markdown table
+            zh_Hans: 单个Markdown格式文本
+          label:
+            en_US: Markdown table text
+            ja_JP: Markdown table text
+            pt_BR: Markdown table text
+            zh_Hans: Markdown 表格文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: '2'
+        tool_configurations: {}
+        tool_description: 将 Markdown 表格转换为 CSV 文件的工具
+        tool_label: Markdown 表格 ⮕ CSV
+        tool_name: md_to_csv
+        tool_node_version: '2'
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1787102164750.result#}}'
+          output_filename:
+            type: mixed
+            value: step1_complaint_handling_transformed
+        type: tool
+      height: 52
+      id: '1787104678508'
+      position:
+        x: 986.1143189002576
+        y: 305.97427368289203
+      positionAbsolute:
+        x: 986.1143189002576
+        y: 305.97427368289203
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Input text of single Markdown table
+            ja_JP: Input text of single Markdown table
+            pt_BR: Input text of single Markdown table
+            zh_Hans: 单个Markdown格式文本
+          label:
+            en_US: Markdown table text
+            ja_JP: Markdown table text
+            pt_BR: Markdown table text
+            zh_Hans: Markdown 表格文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: '3'
+        tool_configurations: {}
+        tool_description: 将 Markdown 表格转换为 CSV 文件的工具
+        tool_label: Markdown 表格 ⮕ CSV
+        tool_name: md_to_csv
+        tool_node_version: '2'
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1787102189176.result#}}'
+          output_filename:
+            type: mixed
+            value: step1_customer_info_transformed
+        type: tool
+      height: 52
+      id: '1787104694632'
+      position:
+        x: 986.1143189002576
+        y: 422.18869008912526
+      positionAbsolute:
+        x: 986.1143189002576
+        y: 422.18869008912526
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Input text of single Markdown table
+            ja_JP: Input text of single Markdown table
+            pt_BR: Input text of single Markdown table
+            zh_Hans: 单个Markdown格式文本
+          label:
+            en_US: Markdown table text
+            ja_JP: Markdown table text
+            pt_BR: Markdown table text
+            zh_Hans: Markdown 表格文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: '4'
+        tool_configurations: {}
+        tool_description: 将 Markdown 表格转换为 CSV 文件的工具
+        tool_label: Markdown 表格 ⮕ CSV
+        tool_name: md_to_csv
+        tool_node_version: '2'
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1787102206372.result#}}'
+          output_filename:
+            type: mixed
+            value: step1_employee_info_transformed
+        type: tool
+      height: 52
+      id: '1787104710231'
+      position:
+        x: 986.1143189002576
+        y: 554.2421417167448
+      positionAbsolute:
+        x: 986.1143189002576
+        y: 554.2421417167448
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Input text of single Markdown table
+            ja_JP: Input text of single Markdown table
+            pt_BR: Input text of single Markdown table
+            zh_Hans: 单个Markdown格式文本
+          label:
+            en_US: Markdown table text
+            ja_JP: Markdown table text
+            pt_BR: Markdown table text
+            zh_Hans: Markdown 表格文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: '5'
+        tool_configurations: {}
+        tool_description: 将 Markdown 表格转换为 CSV 文件的工具
+        tool_label: Markdown 表格 ⮕ CSV
+        tool_name: md_to_csv
+        tool_node_version: '2'
+        tool_parameters:
+          md_text:
+            type: mixed
+            value: '{{#1787102221057.result#}}'
+          output_filename:
+            type: mixed
+            value: step1_hall_info_transformed
+        type: tool
+      height: 52
+      id: '1787104723160'
+      position:
+        x: 986.1143189002576
+        y: 690.0277253105114
+      positionAbsolute:
+        x: 986.1143189002576
+        y: 690.0277253105114
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(o1: str, o2: str, o3: str, o4: str, o5: str,\n         n1:\
+          \ str, n2: str, n3: str, n4: str, n5: str) -> str:\n    \"\"\"\n    Dify\
+          \ Python 代码节点主函数\n    输入：10个markdown文本，分别对应5张表的原始文档(o_i)和处理后文档(n_i)\n  \
+          \  输出：综合数据清洗变更报告的markdown文本\n    \"\"\"\n    # 表名映射\n    table_names = [\n\
+          \        \"complaint_record\",\n        \"complaint_handling\",\n      \
+          \  \"customer_info\",\n        \"employee_info\",\n        \"hall_info\"\
+          \n    ]\n    originals = [o1, o2, o3, o4, o5]\n    new_docs = [n1, n2, n3,\
+          \ n4, n5]\n\n    def parse_markdown_table(text: str):\n        \"\"\"解析markdown表格，返回(表头列表,\
+          \ 数据行列表)（数据行最多3行）\"\"\"\n        lines = text.splitlines()\n        lines\
+          \ = [line.strip() for line in lines if line.strip()]\n        headers =\
+          \ []\n        rows = []\n        # 寻找第一个以|开头和结尾的行作为表头\n        header_line\
+          \ = None\n        for line in lines:\n            if line.startswith('|')\
+          \ and line.endswith('|'):\n                header_line = line\n        \
+          \        break\n        if not header_line:\n            return headers,\
+          \ rows\n\n        headers = [cell.strip() for cell in header_line.split('|')[1:-1]]\n\
+          \n        # 找到数据行（跳过包含---的分隔行）\n        data_lines = []\n        sep_found\
+          \ = False\n        for line in lines[lines.index(header_line)+1:]:\n   \
+          \         if not (line.startswith('|') and line.endswith('|')):\n      \
+          \          continue\n            if '---' in line:\n                sep_found\
+          \ = True\n                continue\n            if sep_found:\n        \
+          \        data_lines.append(line)\n            else:\n                # 若未找到分隔行，保守处理全部当作数据行\n\
+          \                data_lines.append(line)\n\n        for line in data_lines[:3]:\n\
+          \            cells = [cell.strip() for cell in line.split('|')[1:-1]]\n\
+          \            if len(cells) < len(headers):\n                cells += ['']\
+          \ * (len(headers) - len(cells))\n            rows.append(cells)\n\n    \
+          \    return headers, rows\n\n    # 构建报告\n    report = \"# 数据清洗变更报告\\n\\\
+          n\"\n\n    for idx, table_name in enumerate(table_names):\n        o_headers,\
+          \ _ = parse_markdown_table(originals[idx])\n        n_headers, n_rows =\
+          \ parse_markdown_table(new_docs[idx])\n\n        original_cols = ', '.join(o_headers)\
+          \ if o_headers else '（未识别到列名）'\n        standard_cols = ', '.join(n_headers)\
+          \ if n_headers else '（未识别到列名）'\n\n        report += f\"## 表：{table_name}\\\
+          n\"\n        report += f\"- 原列名：{original_cols}\\n\"\n        report +=\
+          \ f\"- 标准列名：{standard_cols}\\n\"\n        # 关键修改：将预览标题独立成段落，并添加空行，使表格能被正确渲染\n\
+          \        report += \"\\n- 结果预览（前3行）：\\n\\n\"\n        if n_rows and n_headers:\n\
+          \            # 构建表格（表头 + 分隔线 + 数据行）\n            table_str = \"| \" + \"\
+          \ | \".join(n_headers) + \" |\\n\"\n            table_str += \"| \" + \"\
+          \ | \".join(['---'] * len(n_headers)) + \" |\\n\"\n            for row in\
+          \ n_rows:\n                table_str += \"| \" + \" | \".join(row) + \"\
+          \ |\\n\"\n            report += table_str\n        else:\n            report\
+          \ += \"（无数据预览）\\n\"\n        report += \"\\n\"  # 表格后留空行，与下一张表分隔\n\n   \
+          \ return {\"result\":report}"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 代码执行 6
+        type: code
+        variables:
+        - value_selector:
+          - '1787101850587'
+          - text
+          value_type: string
+          variable: o1
+        - value_selector:
+          - '1787101871766'
+          - text
+          value_type: string
+          variable: o2
+        - value_selector:
+          - '1787101876964'
+          - text
+          value_type: string
+          variable: o3
+        - value_selector:
+          - '1787101881802'
+          - text
+          value_type: string
+          variable: o4
+        - value_selector:
+          - '1787101885812'
+          - text
+          value_type: string
+          variable: o5
+        - value_selector:
+          - '1787102139441'
+          - result
+          value_type: string
+          variable: n1
+        - value_selector:
+          - '1787102164750'
+          - result
+          value_type: string
+          variable: n2
+        - value_selector:
+          - '1787102189176'
+          - result
+          value_type: string
+          variable: n3
+        - value_selector:
+          - '1787102206372'
+          - result
+          value_type: string
+          variable: n4
+        - value_selector:
+          - '1787102221057'
+          - result
+          value_type: string
+          variable: n5
+      height: 52
+      id: '1787534939015'
+      position:
+        x: 1124.7056343886934
+        y: 963.4028607143376
+      positionAbsolute:
+        x: 1124.7056343886934
+        y: 963.4028607143376
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          label:
+            en_US: Markdown text
+            ja_JP: Markdown text
+            pt_BR: Markdown text
+            zh_Hans: Markdown格式文本
+          llm_description: ''
+          max: null
+          min: null
+          name: md_text
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            ja_JP: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            pt_BR: Optional docx template file for styling。Use "Home"-"Styles Pane"
+              in Microsoft Word to edit styles of the docx file.
+            zh_Hans: 可选的docx模板文件，用于样式控制。使用Microsoft Word中“开始”-“样式窗格”对docx文件的样式进行编辑。
+          label:
+            en_US: DOCX Template File
+            ja_JP: DOCX Template File
+            pt_BR: DOCX Template File
+            zh_Hans: DOCX 模板文件
+          llm_description: An optional .pptx file that serves as a template for the
+            generated presentation
+          max: null
+          min: null
+          name: docx_template_file
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: file
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Optional custom output file name, and the filename suffix is not
+              required.
+            ja_JP: Optional custom output file name, and the filename suffix is not
+              required.
+            pt_BR: Optional custom output file name, and the filename suffix is not
+              required.
+            zh_Hans: 可选的自定义输出文件名，后缀名无需指定
+          label:
+            en_US: Output Filename
+            ja_JP: Output Filename
+            pt_BR: Output Filename
+            zh_Hans: 输出文件名
+          llm_description: ''
+          max: null
+          min: null
+          name: output_filename
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: 'false'
+          form: form
+          human_description:
+            en_US: Whether to include table of contents at the beginning of the DOCX
+              file
+            ja_JP: Whether to include table of contents at the beginning of the DOCX
+              file
+            pt_BR: Whether to include table of contents at the beginning of the DOCX
+              file
+            zh_Hans: 是否在包含目录在DOCX文件开头
+          label:
+            en_US: Include Table of Contents
+            ja_JP: Include Table of Contents
+            pt_BR: Include Table of Contents
+            zh_Hans: 包含目录
+          llm_description: ''
+          max: null
+          min: null
+          name: enable_toc
+          options:
+          - icon: ''
+            label:
+              en_US: 'Yes'
+              ja_JP: 'Yes'
+              pt_BR: 'Yes'
+              zh_Hans: 是
+            value: 'true'
+          - icon: ''
+            label:
+              en_US: 'No'
+              ja_JP: 'No'
+              pt_BR: 'No'
+              zh_Hans: 否
+            value: 'false'
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        params:
+          docx_template_file: ''
+          enable_toc: ''
+          md_text: ''
+          output_filename: ''
+        plugin_id: bowenliang123/md_exporter
+        plugin_unique_identifier: bowenliang123/md_exporter:3.8.0@3e1eb64a2a5223640a81f7e5c7d78f00c0e70c32853654e298dd8c400a3ccbe8
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=d7647aa2-3e62-440b-ae8d-23c9687f2dbc&filename=94713265c9473c3bd2bc8b0dd0794ad40955b7431610243bbd00ab02dae281cf.png
+        provider_id: bowenliang123/md_exporter/md_exporter
+        provider_name: bowenliang123/md_exporter/md_exporter
+        provider_type: builtin
+        selected: false
+        title: Markdown ⮕ DOCX
+        tool_configurations:
+          enable_toc:
+            type: constant
+            value: 'false'
+        tool_description: 将 Markdown 转换为 DOCX 文件的工具
+        tool_label: Markdown ⮕ DOCX
+        tool_name: md_to_docx
+        tool_node_version: '2'
+        tool_parameters:
+          docx_template_file:
+            type: constant
+            value: null
+          md_text:
+            type: mixed
+            value: '{{#1787534939015.result#}}'
+          output_filename:
+            type: mixed
+            value: 数据清洗变更报告
+        type: tool
+      height: 88
+      id: '1787536176080'
+      position:
+        x: 1426.7056343886934
+        y: 963.4028607143376
+      positionAbsolute:
+        x: 1426.7056343886934
+        y: 963.4028607143376
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: 666.0489405251519
+      y: -551.6259381877967
+      zoom: 1.2869694266296108
+  rag_pipeline_variables: []
